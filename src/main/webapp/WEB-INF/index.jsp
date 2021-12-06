@@ -34,26 +34,30 @@
 				Your Gold: <c:out value="${ ninjagold.getGold() }"></c:out>
 			</h2>
 			<div class="row justify-content-around">
-				<div class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
+				<form action="/gold/farm" method="post"
+					class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
 					<h2>Farm</h2>
 					<p>(earns 10-20 gold)</p>
-					<button class="btn btn-success" onclick="window.location.href='/gold/farm';">Find Gold!</button>
-				</div>
-				<div class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
+					<input class="btn btn-success" type="submit" value="Find Gold!">
+				</form>
+				<form action="/gold/cave" method="post"
+					class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
 					<h2>Cave</h2>
 					<p>(earns 5-10 gold)</p>
-					<button class="btn btn-success" onclick="window.location.href='/gold/cave';">Find Gold!</button>
-				</div>
-				<div class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
+					<input class="btn btn-success" type="submit" value="Find Gold!">
+				</form>
+				<form action="/gold/house" method="post"
+					class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
 					<h2>House</h2>
 					<p>(earns 2-5 gold)</p>
-					<button class="btn btn-success" onclick="window.location.href='/gold/house';">Find Gold!</button>
-				</div>
-				<div class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
+					<input class="btn btn-success" type="submit" value="Find Gold!">
+				</form>
+				<form action="/gold/casino" method="post"
+					class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
 					<h2>Casino!</h2>
 					<p>(earns/takes 0-50 gold)</p>
-					<button class="btn btn-success" onclick="window.location.href='/gold/casino';">Find Gold!</button>
-				</div>
+					<input class="btn btn-success" type="submit" value="Find Gold!">
+				</form>
 			</div>
 			<br>
 			<h2>Activities</h2>

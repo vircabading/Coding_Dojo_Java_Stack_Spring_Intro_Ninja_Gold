@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.vcabading.ninjagold.models.DateTime;
 import com.vcabading.ninjagold.models.NinjaGold;
@@ -18,6 +19,7 @@ import com.vcabading.ninjagold.models.NinjaGold;
 
 @Controller
 public class HomeController {
+	
 	@GetMapping("/")
 	public String index(Model model, HttpSession session) {
 		return "redirect:/gold";
@@ -36,7 +38,7 @@ public class HomeController {
 		return "index.jsp";
 	}
 	
-	@GetMapping("/gold/{location}") 
+	@PostMapping("/gold/{location}") 
 	public String goldLocation(@PathVariable("location") String location,
 					HttpSession session) {
 		int min;
@@ -56,6 +58,8 @@ public class HomeController {
 		} else {
 			return "redirect:/";
 		}
+		
+		//	---- Create Event String ---------------------------------------
 		NinjaGold ninjagold = (NinjaGold) session.getAttribute("ninjagold");
 		int goldEarned = ninjagold.addGold(min, max);
 		ArrayList<String> events = (ArrayList<String>) session.getAttribute("events");
