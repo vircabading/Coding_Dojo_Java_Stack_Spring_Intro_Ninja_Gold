@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.vcabading.ninjagold.models.DateTime;
 import com.vcabading.ninjagold.models.NinjaGold;
 
 /////////////////////////////////////////////////////////////////
@@ -58,7 +59,10 @@ public class HomeController {
 		NinjaGold ninjagold = (NinjaGold) session.getAttribute("ninjagold");
 		int goldEarned = ninjagold.addGold(min, max);
 		ArrayList<String> events = (ArrayList<String>) session.getAttribute("events");
+		String date = DateTime.getDate();
+		String time = DateTime.getTime();
 		String event = "You entered a " + location + " and earned " + goldEarned + " gold.";
+		event += " ( " + date + " " + time + " )";
 		events.add(event);
 		session.setAttribute("events", events);
 		return "redirect:/";

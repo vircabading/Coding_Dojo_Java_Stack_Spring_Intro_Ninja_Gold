@@ -62,15 +62,6 @@
 					<c:forEach var="event" items="${ events }">
 						<p>${ event }</p>
 					</c:forEach>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quaerat rerum possimus. Quam maiores soluta a reiciendis nisi quaerat nihil odit recusandae fuga aliquam repellendus sequi ipsa sapiente! Perspiciatis voluptates.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quaerat rerum possimus. Quam maiores soluta a reiciendis nisi quaerat nihil odit recusandae fuga aliquam repellendus sequi ipsa sapiente! Perspiciatis voluptates.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quaerat rerum possimus. Quam maiores soluta a reiciendis nisi quaerat nihil odit recusandae fuga aliquam repellendus sequi ipsa sapiente! Perspiciatis voluptates.
-					</p>
 				</div>
 			</div>
 
