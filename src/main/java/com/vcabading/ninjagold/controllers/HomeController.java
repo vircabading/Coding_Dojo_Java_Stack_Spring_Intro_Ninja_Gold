@@ -43,13 +43,13 @@ public class HomeController {
 		if ( location.equals("farm")) {
 			min = 10;
 			max = 20;
-		} else if ( location.equals("") ) {
+		} else if ( location.equals("cave") ) {
 			min = 5;
 			max = 10;
-		} else if ( location.equals("") ) {
+		} else if ( location.equals("house") ) {
 			min = 2;
 			max = 5;
-		} else if ( location.equals("") ) {
+		} else if ( location.equals("casino") ) {
 			min = -50;
 			max = 50;
 		} else {
@@ -58,7 +58,7 @@ public class HomeController {
 		NinjaGold ninjagold = (NinjaGold) session.getAttribute("ninjagold");
 		int goldEarned = ninjagold.addGold(min, max);
 		ArrayList<String> events = (ArrayList<String>) session.getAttribute("events");
-		String event = "You entered a " + location + " and earned " + goldEarned + "gold.";
+		String event = "You entered a " + location + " and earned " + goldEarned + " gold.";
 		events.add(event);
 		session.setAttribute("events", events);
 		return "redirect:/";
