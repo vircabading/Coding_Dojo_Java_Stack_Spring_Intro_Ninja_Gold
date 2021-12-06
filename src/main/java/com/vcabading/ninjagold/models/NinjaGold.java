@@ -17,7 +17,7 @@ public class NinjaGold {
 		this.gold = 0;
 	}
 
-	public addGold(int min, int max) {
+	public int addGold(int min, int max) {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HHmmss");
         int currentTime = Integer.parseInt(simpleDateFormat.format(new Date()));
         Random randMachine = new Random();
@@ -25,6 +25,7 @@ public class NinjaGold {
         int difference = max - min;
         int randomAddNumber = randMachine.nextInt(difference) + min;
         this.gold += randomAddNumber;
+        return randomAddNumber;
 	}
 	
 	//	//// GETTTERS AND SETTERS //////////////////////

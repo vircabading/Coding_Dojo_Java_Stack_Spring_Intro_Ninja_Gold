@@ -30,7 +30,46 @@
 	<!-- //// MAIN AREA //////// -->
 	<main role="main">
 		<div class="container mt-4">
-			<h1>Test Ninja Gold</h1>
+			<h2>
+				Your Gold: <c:out value="${ ninjagold.getGold() }"></c:out>
+			</h2>
+			<div class="row justify-content-around">
+				<div class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
+					<h2>Farm</h2>
+					<p>(earns 10-20 gold)</p>
+					<button class="btn btn-success" onclick="window.location.href='/gold/farm';">Find Gold!</button>
+				</div>
+				<div class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
+					<h2>Cave</h2>
+					<p>(earns 5-10 gold)</p>
+					<button class="btn btn-success" onclick="window.location.href='/gold/cave';">Find Gold!</button>
+				</div>
+				<div class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
+					<h2>House</h2>
+					<p>(earns 2-5 gold)</p>
+					<button class="btn btn-success" onclick="window.location.href='/gold/house';">Find Gold!</button>
+				</div>
+				<div class="col-2 d-flex flex-column m-1 p-1 justify-content-center align-items-center rounded bg-info">
+					<h2>Casino!</h2>
+					<p>(earns/takes 0-50 gold)</p>
+					<button class="btn btn-success" onclick="window.location.href='/gold/casino';">Find Gold!</button>
+				</div>
+			</div>
+			<br>
+			<h2>Activities</h2>
+			<div class="row">
+				<div class="col round bg-secondary">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quaerat rerum possimus. Quam maiores soluta a reiciendis nisi quaerat nihil odit recusandae fuga aliquam repellendus sequi ipsa sapiente! Perspiciatis voluptates.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quaerat rerum possimus. Quam maiores soluta a reiciendis nisi quaerat nihil odit recusandae fuga aliquam repellendus sequi ipsa sapiente! Perspiciatis voluptates.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quaerat rerum possimus. Quam maiores soluta a reiciendis nisi quaerat nihil odit recusandae fuga aliquam repellendus sequi ipsa sapiente! Perspiciatis voluptates.
+					</p>
+				</div>
+			</div>
 
 		</div>
 	</main>
